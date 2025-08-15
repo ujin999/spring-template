@@ -15,7 +15,7 @@ class ErrorCodeTest {
 
         // When & Then
         assertThat(errorCode.getStatus()).isEqualTo(400);
-        assertThat(errorCode.getCode()).isEqualTo("C001");
+        assertThat(errorCode.getErrorCode()).isEqualTo("INVALID_INPUT_VALUE");
         assertThat(errorCode.getMessage()).isEqualTo("Invalid Input Value");
     }
 }

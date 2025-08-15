@@ -1,7 +1,7 @@
 package com.projectname.core.response;
 
 public record ApiResponse<T>(
-        int statusCode,
+        int status,
         String message,
         T data) {
     public static <T> ApiResponse<T> success() {

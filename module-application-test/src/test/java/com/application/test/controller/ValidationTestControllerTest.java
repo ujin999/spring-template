@@ -41,7 +41,7 @@ class ValidationTestControllerTest {
         // Then
         resultActions
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.code").value(ErrorCode.INVALID_INPUT_VALUE.getStatus()))
+                .andExpect(jsonPath("$.status").value(ErrorCode.INVALID_INPUT_VALUE.getStatus()))
                 .andExpect(jsonPath("$.message").value(ErrorCode.INVALID_INPUT_VALUE.getMessage()))
                 .andExpect(jsonPath("$.errors").isArray())
                 .andExpect(jsonPath("$.errors.length()").value(4))
@@ -69,6 +69,6 @@ class ValidationTestControllerTest {
         // Then
         resultActions
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.code").value(200));
+                .andExpect(jsonPath("$.status").value(200));
     }
 }

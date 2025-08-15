@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
 
         final ApiErrorResponse response = ApiErrorResponse.of(
                 ErrorCode.INVALID_INPUT_VALUE.getStatus(),
-                ErrorCode.INVALID_INPUT_VALUE.getCode(),
+                ErrorCode.INVALID_INPUT_VALUE.getErrorCode(),
                 ErrorCode.INVALID_INPUT_VALUE.getMessage(),
                 errors
         );

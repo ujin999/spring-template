@@ -17,7 +17,7 @@ public class ApiResponseTest {
         ApiResponse<String> response = ApiResponse.success(testData);
 
         // then
-        assertThat(response.statusCode()).isEqualTo(200);
+        assertThat(response.status()).isEqualTo(200);
         assertThat(response.message()).isEqualTo("Success");
         assertThat(response.data()).isEqualTo(testData);
     }
@@ -31,7 +31,7 @@ public class ApiResponseTest {
         ApiResponse<Void> response = ApiResponse.success();
 
         // Then
-        assertThat(response.statusCode()).isEqualTo(200);
+        assertThat(response.status()).isEqualTo(200);
         assertThat(response.message()).isEqualTo("Success");
         assertThat(response.data()).isNull();
     }
